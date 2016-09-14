@@ -123,7 +123,7 @@ class DFA {
     uint32_t flag_;     // Empty string bitfield flags in effect on the way
                         // into this state, along with kFlagMatch if this
                         // is a matching state.
-    std::atomic<State*> next_[];    // Outgoing arrows from State,
+    std::atomic<State*> next_[0];    // Outgoing arrows from State,
                         // one per input byte class
   };
 
